@@ -72,6 +72,9 @@ const config = {
             filename: "app-[hash].css",
             allChunks: true
         }),
+        new TransferWebpackPlugin([
+            { from: "env", to:"env"},
+        ], path.resolve(__dirname)),
         // I add esj template as it is easier to add hashed js and css
         // also think to move title to package.json
         new HtmlWebpackPlugin({

@@ -17,9 +17,10 @@ export default function reducer(state = initialState, action) {
     
     switch (action[TYPE_KEY]) {
         case RECIEVE_EVENT_LIST_ACTION:
-            newState = Object.assign({}, state, {
-                [EVENT_LIST]: action[EVENT_LIST], [EVENT]: action[EVENT]
-            });
+            newState = {
+                ...state,
+                [EVENT_LIST]: action[EVENT_LIST]
+            };
             break;
         case RECIEVE_EVENT_DETAIL_ACTION:
             newState = Object.assign({}, state, {
@@ -36,11 +37,11 @@ export default function reducer(state = initialState, action) {
 export function getAllEvents() {
     return (dispatch) => {
         rest.doGet(
-            `${window.sysdig.even_link}`
+            `${window.sysdig.even_link.BASE_URL}`
         ).then(eventList => {
             dispatch(recieveEventListSuccessful(eventList));
         }, reason => {
-        
+            dispatch(reason);
         });
     };
 }
@@ -49,7 +50,7 @@ export function recieveEventListSuccessful(eventList) {
     return {
         [TYPE_KEY]: RECIEVE_EVENT_LIST_ACTION,
         [EVENT_LIST]: eventList
-    }
+    };
 }
 
 

@@ -1,6 +1,6 @@
 import "./index.scss";
 import {Route, BrowserRouter as Router, Switch} from "react-router-dom";
-import Event from "./component/Event";
+import Events from "./containers/Events";
 import MuiThemeProvider from "material-ui/styles/MuiThemeProvider";
 import {Provider} from "react-redux";
 import React from "react";
@@ -22,7 +22,7 @@ const MainApplication = () => {
                         <Route
                             exact
                             path="/"
-                            component={Event}
+                            component={Events}
                         />
                     </Switch>
                 </div>

@@ -1,18 +1,17 @@
-import {bindActionCreators} from "redux";
-import {connect} from "react-redux";
-
-import Events from "../component/Event";
 import {
-    EVENT_LIST,
     EVENT,
+    EVENT_LIST,
     getAllEvents
 } from "../services/event";
+import AllEvent from "../component/AllEvent";
+import {bindActionCreators} from "redux";
+import {connect} from "react-redux";
 
 const mapStateToProps = (state) => {
     return {
         [EVENT_LIST]: state.events[EVENT_LIST],
         [EVENT]: state.events[EVENT]
-    }
+    };
 };
 
 const mapDispatchToProps = (dispatch) => {
@@ -21,4 +20,4 @@ const mapDispatchToProps = (dispatch) => {
     }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(Events);
+export default connect(mapStateToProps, mapDispatchToProps)(AllEvent);

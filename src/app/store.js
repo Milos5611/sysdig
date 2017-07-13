@@ -1,7 +1,10 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
+import events from "../services/event";
 import thunk from "redux-thunk";
 
-const reducers = {};
+const reducers = {
+    events
+};
 
 const logger = store => next => action => {
     

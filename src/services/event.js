@@ -1,3 +1,4 @@
+import {beginLoading, endLoading} from "./loading";
 import {TYPE_KEY} from "../app/constant";
 import rest from "../app/rest";
 
@@ -36,12 +37,15 @@ export default function reducer(state = initialState, action) {
 
 export function getAllEvents() {
     return (dispatch) => {
+        dispatch(beginLoading());
         rest.doGet(
             `${window.sysdig.even_link.BASE_URL}`
         ).then(eventList => {
             dispatch(recieveEventListSuccessful(eventList));
+            dispatch(endLoading());
         }, reason => {
             dispatch(reason);
+            dispatch(endLoading());
         });
     };
 }

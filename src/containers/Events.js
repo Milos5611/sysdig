@@ -3,7 +3,7 @@ import {
     EVENT_LIST,
     getAllEvents
 } from "../services/event";
-import AllEvent from "../component/AllEvent";
+import Events from "../component/Events";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 
@@ -20,4 +20,4 @@ const mapDispatchToProps = (dispatch) => {
     }, dispatch);
 };
 
-export default connect(mapStateToProps, mapDispatchToProps)(AllEvent);
+export default connect(mapStateToProps, mapDispatchToProps)(Events);

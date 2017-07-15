@@ -1,11 +1,13 @@
 import {applyMiddleware, combineReducers, createStore} from "redux";
 import events from "../services/event";
 import loading from "../services/loading";
+import notification from "../services/notification";
 import thunk from "redux-thunk";
 
 const reducers = {
     events,
-    loading
+    loading,
+    notification
 };
 
 const logger = store => next => action => {

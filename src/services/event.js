@@ -1,6 +1,7 @@
 import {beginLoading, endLoading} from "./loading";
 import {TYPE_KEY} from "../app/constant";
 import rest from "../app/rest";
+import {showNotification} from "./notification";
 
 const RECIEVE_EVENT_LIST_ACTION = "RECIEVE_EVENT_LIST_ACTION";
 const RECIEVE_EVENT_DETAIL_ACTION = "RECIEVE_EVENT_DETAIL_ACTION";
@@ -43,9 +44,11 @@ export function getAllEvents() {
         ).then(eventList => {
             dispatch(recieveEventListSuccessful(eventList));
             dispatch(endLoading());
+            dispatch(showNotification("List of event's successfully  are loaded", "X"));
         }, reason => {
             dispatch(reason);
             dispatch(endLoading());
+            dispatch(showNotification("Problem: Event's can't be loaded", "X"));
         });
     };
 }

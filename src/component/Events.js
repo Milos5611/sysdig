@@ -1,6 +1,5 @@
 import {Card, CardHeader, CardText} from "material-ui/Card";
 import React, {PropTypes, PureComponent} from "react";
-import Loading from "./Loading";
 
 export default class Events extends PureComponent {
     
@@ -27,7 +26,6 @@ export default class Events extends PureComponent {
         const {events} = this.props;
         return (
             <div className="container">
-                <Loading/>
                 {events && events.events.map(d => {
                     return (
                         <Card

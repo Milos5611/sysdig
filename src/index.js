@@ -9,7 +9,7 @@ import React from "react";
 import domready from "domready";
 import injectTapEventPlugin from "react-tap-event-plugin";
 import {render} from "react-dom";
-import store from "./app/store";
+import store from "./common/store";
 
 // Needed for onTouchTap
 // http://stackoverflow.com/a/34015469/988941

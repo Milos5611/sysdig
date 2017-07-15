@@ -1,4 +1,4 @@
-import {TYPE_KEY} from "../app/constant";
+import {TYPE_KEY} from "../common/constant";
 
 export const BEGIN_LOADING = "BEGIN_LOADING";
 export const END_LOADING = "END_LOADING";

@@ -3,7 +3,7 @@ import {
     EVENT_LIST,
     getAllEvents
 } from "../services/event";
-import Events from "../component/Events";
+import Events from "../component/Events/Events";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 

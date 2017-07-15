@@ -6,7 +6,7 @@ import {
     handleCloseNotificationRequestAction,
     handleToucheTapAction
 } from "../services/notification";
-import Notification from "../component/Notification";
+import Notification from "../component/Notification/Notification";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";
 

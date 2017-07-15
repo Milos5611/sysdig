@@ -1,0 +1,19 @@
+.eventList--header {
+    @extend %default;
+
+    .eventList_number {
+        font-weight: $bold;
+        text-decoration: underline;
+        color: rgb(255, 64, 129);
+    }
+}
+
+.card--wrapper {
+    @extend %default;
+
+    .cardHead {
+        .cardHead--header {
+            font-weight: $bold;
+        }
+    }
+}

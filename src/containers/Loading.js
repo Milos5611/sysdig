@@ -1,4 +1,4 @@
-import Loading from "../component/Loading";
+import Loading from "../component/Loading/Loading";
 import {OPEN} from "../services/loading";
 import {bindActionCreators} from "redux";
 import {connect} from "react-redux";

@@ -1,6 +1,6 @@
 import {beginLoading, endLoading} from "./loading";
-import {TYPE_KEY} from "../app/constant";
-import rest from "../app/rest";
+import {TYPE_KEY} from "../common/constant";
+import rest from "../common/rest";
 import {showNotification} from "./notification";
 
 const RECIEVE_EVENT_LIST_ACTION = "RECIEVE_EVENT_LIST_ACTION";

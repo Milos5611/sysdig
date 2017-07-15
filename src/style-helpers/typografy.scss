@@ -1,0 +1,13 @@
+%default {
+    width: 40%;
+    margin: 0 auto;
+    word-wrap: break-word;
+
+    @media screen and(max-width: $tablet_device) {
+        width: 60%;
+    }
+
+    @media screen and(max-width: $mobile_device) {
+        width: 100%;
+    }
+}

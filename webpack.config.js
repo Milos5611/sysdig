@@ -23,7 +23,7 @@ const config = {
     devtool: "eval-source-map",
     output: {
         path: path.resolve(__dirname, "build"), // Path of output file
-        filename: "[name].js?[hash]"
+        filename: "[name]-[hash].js"
     },
     module: {
         rules: [
@@ -75,8 +75,6 @@ const config = {
         new TransferWebpackPlugin([
             { from: "env", to:"env"},
         ], path.resolve(__dirname)),
-        // I add esj template as it is easier to add hashed js and css
-        // also think to move title to package.json
         new HtmlWebpackPlugin({
             template: path.join(__dirname, "index.ejs"),
             path: __dirname,

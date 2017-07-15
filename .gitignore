@@ -190,3 +190,6 @@ yarn.lock
 .yarnclean
 yarn-debug.log
 yarn-error.log
+
+### npm ###
+package-lock.json
